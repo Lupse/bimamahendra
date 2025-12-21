@@ -16,7 +16,7 @@ export default function Home() {
                 <p className="small-caps text-gray-500 mb-3 lg:mb-4 accent-line">Mahasiswa Sistem Informasi</p>
                 <h1 className="display-text mb-4 lg:mb-6">
                   ALIF<br/>
-                  <span className="text-gray-300">BIMA</span><br/>
+                  <span className="text-yellow-400">BIMA</span><br/>
                   MAHENDRA
                 </h1>
                 <div className="horizontal-line">
@@ -40,15 +40,15 @@ export default function Home() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4 lg:gap-8 pt-8 lg:pt-12 border-t border-gray-100">
                 <div className="stagger-animation text-center">
-                  <div className="text-2xl lg:text-4xl font-bold text-black">3.82</div>
+                  <div className="text-2xl lg:text-4xl font-bold ">3.82</div>
                   <p className="small-caps text-gray-500 text-xs lg:text-sm">IPK</p>
                 </div>
                 <div className="stagger-animation text-center">
-                  <div className="text-2xl lg:text-4xl font-bold text-black">6+</div>
+                  <div className="text-2xl lg:text-4xl font-bold ">6+</div>
                   <p className="small-caps text-gray-500 text-xs lg:text-sm">Proyek</p>
                 </div>
                 <div className="stagger-animation text-center">
-                  <div className="text-2xl lg:text-4xl font-bold text-black">4+</div>
+                  <div className="text-2xl lg:text-4xl font-bold ">4+</div>
                   <p className="small-caps text-gray-500 text-xs lg:text-sm">Peran</p>
                 </div>
               </div>
@@ -59,7 +59,7 @@ export default function Home() {
               <div className="relative">
                 <div className="w-60 h-72 lg:w-80 lg:h-96 xl:w-120 xl:h-[600px] relative overflow-hidden">
                   {/* Decorative elements */}
-                  <div className="absolute -top-2 -left-2 lg:-top-4 lg:-left-4 w-full h-full border border-gray-200 z-0"></div>
+                  <div className="absolute -top-2 -left-2 lg:-top-4 lg:-left-4 w-full h-full border-2 border-yellow-400 z-0"></div>
                   <div className="absolute top-2 left-2 lg:top-4 lg:left-4 w-full h-full bg-gray-50 z-10"></div>
                   <div className="relative z-20 w-full h-full overflow-hidden">
                     <img 
@@ -70,9 +70,9 @@ export default function Home() {
                   </div>
                 </div>
                 {/* Floating badge */}
-                <div className="absolute -bottom-2 -right-2 lg:-bottom-4 lg:-right-4 bg-black text-white px-3 py-2 lg:px-6 lg:py-4">
-                  <p className="small-caps text-white text-xs">Available</p>
-                  <p className="text-white font-medium text-sm">for work</p>
+                <div className="absolute -bottom-2 -right-2 lg:-bottom-4 lg:-right-4 bg-yellow-400 text-black px-3 py-2 lg:px-6 lg:py-4">
+                  <p className="small-caps text-black text-xs font-bold">Available</p>
+                  <p className="text-black font-medium text-sm">for work</p>
                 </div>
               </div>
             </div>
@@ -86,7 +86,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
             <div className="col-span-1 lg:col-span-4">
-              <h2 className="text-3xl lg:text-5xl font-bold mb-4 lg:mb-8 vertical-line">Pengalaman<br/>Kerja</h2>
+              <h2 className="text-3xl lg:text-5xl font-bold mb-4 lg:mb-8 vertical-line">Pengalaman<br/><span className='text-yellow-400'>Kerja</span></h2>
               <p className="text-gray-600 leading-relaxed hidden lg:block">
                 Membangun pengalaman digital dengan tujuan dan presisi. 
                 Setiap peran telah membentuk pendekatan saya dalam memecahkan masalah yang kompleks.
@@ -98,7 +98,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-6">
                   <div className="lg:col-span-1">
                     <p className="small-caps text-gray-500 mb-2">Jun 2025 - Present</p>
-                    <div className="w-8 lg:w-12 h-px bg-black mb-3 lg:mb-4"></div>
+                    <div className="w-8 lg:w-12 h-px bg-yellow-400 mb-3 lg:mb-4"></div>
                   </div>
                   <div className="lg:col-span-3">
                     <h3 className="text-xl lg:text-2xl font-medium mb-2">Asisten Riset</h3>
@@ -120,7 +120,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-6">
                   <div className="lg:col-span-1">
                     <p className="small-caps text-gray-500 mb-2">Feb 2025 - Present</p>
-                    <div className="w-8 lg:w-12 h-px bg-black mb-3 lg:mb-4"></div>
+                    <div className="w-8 lg:w-12 h-px bg-yellow-400 mb-3 lg:mb-4"></div>
                   </div>
                   <div className="lg:col-span-3">
                     <h3 className="text-xl lg:text-2xl font-medium mb-2">Asisten Dosen</h3>
@@ -141,7 +141,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-6">
                   <div className="lg:col-span-1">
                     <p className="small-caps text-gray-500 mb-2">Feb 2024 - Present</p>
-                    <div className="w-8 lg:w-12 h-px bg-black mb-3 lg:mb-4"></div>
+                    <div className="w-8 lg:w-12 h-px bg-yellow-400 mb-3 lg:mb-4"></div>
                   </div>
                   <div className="lg:col-span-3">
                     <h3 className="text-xl lg:text-2xl font-medium mb-2">Asisten Laboratorium</h3>
@@ -168,7 +168,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
             <div className="col-span-1 lg:col-span-4 order-first">
-              <h2 className="text-3xl lg:text-5xl font-bold mb-4 lg:mb-8 vertical-line">Pendidikan &<br/>Pembelajaran</h2>
+              <h2 className="text-3xl lg:text-5xl font-bold mb-4 lg:mb-8 vertical-line"><span className='text-yellow-400'>Pendidikan</span> &<br/>Pembelajaran</h2>
               <p className="text-gray-600 leading-relaxed mb-6 lg:mb-8 hidden lg:block">
                 Pembelajaran berkelanjutan dan keunggulan akademik telah menjadi fondasi 
                 perjalanan teknis saya.
@@ -194,7 +194,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
                   <div className="lg:col-span-1">
                     <p className="small-caps text-gray-500 mb-2">Aug 2023 - Nov 2026</p>
-                    <div className="w-8 lg:w-12 h-px bg-black mb-3 lg:mb-4"></div>
+                    <div className="w-8 lg:w-12 h-px bg-yellow-400 mb-3 lg:mb-4"></div>
                     <div className="text-xl lg:text-2xl font-bold">3.82<span className="text-sm lg:text-base font-normal text-gray-500">/4.00</span></div>
                   </div>
                   <div className="lg:col-span-2">
@@ -212,18 +212,18 @@ export default function Home() {
                 <div className="professional-card p-4 lg:p-6">
                   <h4 className="font-bold mb-3 lg:mb-4 accent-line text-sm lg:text-base">Proyek Utama</h4>
                   <ul className="space-y-2 text-gray-700 text-sm lg:text-base">
-                    <li className="flex items-start"><span className="w-2 h-2 bg-black mr-2 lg:mr-3 mt-2 shrink-0"></span>Analisis DeLone McLean</li>
-                    <li className="flex items-start"><span className="w-2 h-2 bg-black mr-2 lg:mr-3 mt-2 shrink-0"></span>Sistem Manajemen Obat</li>
-                    <li className="flex items-start"><span className="w-2 h-2 bg-black mr-2 lg:mr-3 mt-2 shrink-0"></span>Analisis Spasial GIS</li>
-                    <li className="flex items-start"><span className="w-2 h-2 bg-black mr-2 lg:mr-3 mt-2 shrink-0"></span>BarBim+ Tes Psikologi</li>
+                    <li className="flex items-start"><span className="w-2 h-2 bg-yellow-400 mr-2 lg:mr-3 mt-2 shrink-0"></span>Analisis DeLone McLean</li>
+                    <li className="flex items-start"><span className="w-2 h-2 bg-yellow-400 mr-2 lg:mr-3 mt-2 shrink-0"></span>Sistem Manajemen Obat</li>
+                    <li className="flex items-start"><span className="w-2 h-2 bg-yellow-400 mr-2 lg:mr-3 mt-2 shrink-0"></span>Analisis Spasial GIS</li>
+                    <li className="flex items-start"><span className="w-2 h-2 bg-yellow-400 mr-2 lg:mr-3 mt-2 shrink-0"></span>BarBim+ Tes Psikologi</li>
                   </ul>
                 </div>
                 <div className="professional-card p-4 lg:p-6">
                   <h4 className="font-bold mb-3 lg:mb-4 accent-line text-sm lg:text-base">Peran Akademik</h4>
                   <ul className="space-y-2 text-gray-700 text-sm lg:text-base">
-                    <li className="flex items-center"><span className="w-2 h-2 bg-black mr-2 lg:mr-3"></span>Asisten Lab</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-black mr-2 lg:mr-3"></span>Asisten Dosen</li>
-                    <li className="flex items-center"><span className="w-2 h-2 bg-black mr-2 lg:mr-3"></span>Asisten Riset</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-yellow-400 mr-2 lg:mr-3"></span>Asisten Lab</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-yellow-400 mr-2 lg:mr-3"></span>Asisten Dosen</li>
+                    <li className="flex items-center"><span className="w-2 h-2 bg-yellow-400 mr-2 lg:mr-3"></span>Asisten Riset</li>
                   </ul>
                 </div>
               </div>
@@ -237,7 +237,7 @@ export default function Home() {
         <div className="section-number">03</div>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="large-text mb-6">Kepemimpinan &<br/>Organisasi</h2>
+            <h2 className="large-text mb-6">Kepemimpinan &<br/><span className='text-yellow-400'>Organisasi</span></h2>
             <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Membangun komunitas dan memimpin tim untuk mencapai tujuan bersama melalui 
               inovasi dan kolaborasi.
@@ -253,7 +253,7 @@ export default function Home() {
                 </div>
                 <div className="text-right">
                   <p className="small-caps text-gray-500">Mar 2025 - Sekarang</p>
-                  <div className="w-12 h-px bg-black mt-2 ml-auto"></div>
+                  <div className="w-12 h-px bg-yellow-400 mt-2 ml-auto"></div>
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed mb-6">
@@ -281,7 +281,7 @@ export default function Home() {
                 </div>
                 <div className="text-right">
                   <p className="small-caps text-gray-500">Sep 2024 - Nov 2024</p>
-                  <div className="w-12 h-px bg-black mt-2 ml-auto"></div>
+                  <div className="w-12 h-px bg-yellow-400 mt-2 ml-auto"></div>
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed mb-6">
@@ -309,7 +309,7 @@ export default function Home() {
                 </div>
                 <div className="text-right">
                   <p className="small-caps text-gray-500">Agu 2024 - Feb 2025</p>
-                  <div className="w-12 h-px bg-black mt-2 ml-auto"></div>
+                  <div className="w-12 h-px bg-yellow-400 mt-2 ml-auto"></div>
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed mb-6">
@@ -337,7 +337,7 @@ export default function Home() {
                 </div>
                 <div className="text-right">
                   <p className="small-caps text-gray-500">Apr 2024 - Mei 2024</p>
-                  <div className="w-12 h-px bg-black mt-2 ml-auto"></div>
+                  <div className="w-12 h-px bg-yellow-400 mt-2 ml-auto"></div>
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed mb-6">
@@ -366,7 +366,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
             <div className="col-span-1 lg:col-span-4">
-              <h2 className="text-3xl lg:text-5xl font-bold mb-4 lg:mb-8 vertical-line">Keterampilan &<br/>Keahlian</h2>
+              <h2 className="text-3xl lg:text-5xl font-bold mb-4 lg:mb-8 vertical-line">Keterampilan &<br/><span className='text-yellow-400'>Keahlian</span></h2>
               <p className="text-gray-600 leading-relaxed mb-6 lg:mb-8 hidden lg:block">
                 Kumpulan keterampilan komprehensif yang dibangun melalui pembelajaran berkelanjutan 
                 dan pengalaman langsung dalam pengembangan web modern.
@@ -454,19 +454,19 @@ export default function Home() {
                 <h4 className="font-bold mb-4 lg:mb-6 text-center text-sm lg:text-base">Soft Skills & Bahasa</h4>
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 text-center mb-6 lg:mb-8">
                   <div className="space-y-2">
-                    <div className="w-8 h-8 lg:w-12 lg:h-12 bg-black text-white flex items-center justify-center mx-auto text-sm lg:text-xl font-bold">R</div>
+                    <div className="w-8 h-8 lg:w-12 lg:h-12 bg-yellow-400 text-white flex items-center justify-center mx-auto text-sm lg:text-xl font-bold">R</div>
                     <p className="small-caps text-xs lg:text-sm">Riset</p>
                   </div>
                   <div className="space-y-2">
-                    <div className="w-8 h-8 lg:w-12 lg:h-12 bg-black text-white flex items-center justify-center mx-auto text-sm lg:text-xl font-bold">M</div>
+                    <div className="w-8 h-8 lg:w-12 lg:h-12 bg-yellow-400 text-white flex items-center justify-center mx-auto text-sm lg:text-xl font-bold">M</div>
                     <p className="small-caps text-xs lg:text-sm">Mengajar</p>
                   </div>
                   <div className="space-y-2">
-                    <div className="w-8 h-8 lg:w-12 lg:h-12 bg-black text-white flex items-center justify-center mx-auto text-sm lg:text-xl font-bold">A</div>
+                    <div className="w-8 h-8 lg:w-12 lg:h-12 bg-yellow-400 text-white flex items-center justify-center mx-auto text-sm lg:text-xl font-bold">A</div>
                     <p className="small-caps text-xs lg:text-sm">Analitis</p>
                   </div>
                   <div className="space-y-2">
-                    <div className="w-8 h-8 lg:w-12 lg:h-12 bg-black text-white flex items-center justify-center mx-auto text-sm lg:text-xl font-bold">K</div>
+                    <div className="w-8 h-8 lg:w-12 lg:h-12 bg-yellow-400 text-white flex items-center justify-center mx-auto text-sm lg:text-xl font-bold">K</div>
                     <p className="small-caps text-xs lg:text-sm">Kepemimpinan</p>
                   </div>
                 </div>
@@ -506,7 +506,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-6">
                   <div className="lg:col-span-1">
                     <p className="small-caps text-gray-500 mb-2">Jan 2025</p>
-                    <div className="w-8 lg:w-12 h-px bg-black mb-3 lg:mb-4"></div>
+                    <div className="w-8 lg:w-12 h-px bg-yellow-400 mb-3 lg:mb-4"></div>
                   </div>
                   <div className="lg:col-span-3">
                     <h3 className="text-xl lg:text-2xl font-medium mb-2">Junior Web Developer</h3>
@@ -520,7 +520,7 @@ export default function Home() {
                       <span className="px-3 py-1 bg-gray-100 text-xs lg:text-sm font-medium">PHP</span>
                       <span className="px-3 py-1 bg-gray-100 text-xs lg:text-sm font-medium">Database</span>
                     </div>
-                    <button className="px-4 py-2 lg:px-6 lg:py-2 bg-black text-white text-xs lg:text-sm hover:bg-gray-800 transition-colors w-full lg:w-auto">
+                    <button className="px-4 py-2 lg:px-6 lg:py-2 bg-yellow-400 text-black font-semibold text-xs lg:text-sm hover:bg-black hover:text-white transition-colors w-full lg:w-auto">
                       Lihat Detail
                     </button>
                   </div>
@@ -563,13 +563,13 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 mb-8 lg:mb-12">
                 <a 
                   href="mailto:bimamahendra0705@gmail.com" 
-                  className="px-6 py-3 lg:px-8 lg:py-4 bg-white text-black font-medium hover:bg-gray-100 transition-colors text-center text-sm lg:text-base"
+                  className="px-6 py-3 lg:px-8 lg:py-4 bg-yellow-400 text-black font-semibold hover:bg-yellow-500 transition-colors text-center text-sm lg:text-base"
                 >
                   Kirim Email
                 </a>
                 <a 
                   href="tel:+6285156390600" 
-                  className="px-6 py-3 lg:px-8 lg:py-4 border border-white text-white hover:bg-white hover:text-black transition-colors text-center text-sm lg:text-base"
+                  className="px-6 py-3 lg:px-8 lg:py-4 border-2 border-yellow-400 text-white hover:bg-yellow-400 hover:text-black transition-colors text-center text-sm lg:text-base"
                 >
                   Hubungi Saya
                 </a>

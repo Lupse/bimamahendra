@@ -156,7 +156,7 @@ export default function ProjectCarousel() {
                 {/* Project Info */}
                 <div className="order-2 lg:order-2 flex flex-col min-h-[400px] lg:min-h-[450px]">
                   <p className="small-caps text-gray-500 mb-4">{project.period}</p>
-                  <div className="w-12 h-px bg-black mb-6"></div>
+                  <div className="w-12 h-px bg-yellow-400 mb-6"></div>
                   
                   <h3 className="text-2xl lg:text-4xl font-bold mb-3">{project.title}</h3>
                   <p className="font-medium text-gray-700 mb-6 text-sm lg:text-base">{project.subtitle}</p>
@@ -178,7 +178,7 @@ export default function ProjectCarousel() {
                     ))}
                   </div>
                   
-                  <button className="px-6 py-3 bg-black text-white text-sm hover:bg-gray-800 transition-colors w-full lg:w-auto mt-auto">
+                  <button className="px-6 py-3 bg-yellow-400 text-black font-semibold text-sm hover:bg-black hover:text-white transition-colors w-full lg:w-auto mt-auto">
                     Lihat Detail
                   </button>
                 </div>
@@ -193,7 +193,7 @@ export default function ProjectCarousel() {
         {/* Previous Button - Hidden on Mobile */}
         <button
           onClick={prevSlide}
-          className="hidden lg:flex w-14 h-14 border-2 border-black items-center justify-center hover:bg-black hover:text-white transition-colors group"
+          className="hidden lg:flex w-14 h-14 border-2 border-black items-center justify-center hover:bg-yellow-400 hover:text-black hover:border-yellow-400 transition-colors group"
           aria-label="Previous project"
         >
           <svg 
@@ -214,7 +214,7 @@ export default function ProjectCarousel() {
               onClick={() => goToSlide(index)}
               className={`transition-all ${
                 currentSlide === index 
-                  ? 'w-8 lg:w-12 h-2 bg-black' 
+                  ? 'w-8 lg:w-12 h-2 bg-yellow-400' 
                   : 'w-2 h-2 bg-gray-300 hover:bg-gray-400'
               }`}
               aria-label={`Go to project ${index + 1}`}
@@ -225,7 +225,7 @@ export default function ProjectCarousel() {
         {/* Next Button - Hidden on Mobile */}
         <button
           onClick={nextSlide}
-          className="hidden lg:flex w-14 h-14 border-2 border-black items-center justify-center hover:bg-black hover:text-white transition-colors group"
+          className="hidden lg:flex w-14 h-14 border-2 border-black items-center justify-center hover:bg-yellow-400 hover:text-black hover:border-yellow-400 transition-colors group"
           aria-label="Next project"
         >
           <svg 
@@ -242,7 +242,7 @@ export default function ProjectCarousel() {
       {/* Project Counter */}
       <div className="text-center mt-6">
         <p className="small-caps text-gray-500">
-          <span className="text-black font-bold text-lg">{currentSlide + 1}</span>
+          <span className="text-yellow-400 font-bold text-lg">{currentSlide + 1}</span>
           <span className="text-gray-300 mx-2">/</span>
           <span>{projects.length}</span>
         </p>
