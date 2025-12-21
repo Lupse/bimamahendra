@@ -218,7 +218,7 @@ export default function ProjectCarousel() {
         {/* Previous Button - Hidden on Mobile */}
         <button
           onClick={prevSlide}
-          className="hidden lg:flex w-14 h-14 border-2 border-black items-center justify-center hover:bg-yellow-400 hover:text-black hover:border-yellow-400 transition-colors group"
+          className="hidden lg:flex w-14 h-14 border-2 text-yellow-400 border-yellow-400 items-center justify-center hover:bg-yellow-400 hover:text-black hover:border-yellow-400 transition-colors group"
           aria-label="Previous project"
         >
           <svg 
@@ -250,7 +250,7 @@ export default function ProjectCarousel() {
         {/* Next Button - Hidden on Mobile */}
         <button
           onClick={nextSlide}
-          className="hidden lg:flex w-14 h-14 border-2 border-black items-center justify-center hover:bg-yellow-400 hover:text-black hover:border-yellow-400 transition-colors group"
+          className="hidden lg:flex w-14 h-14 border-2 text-yellow-400 border-yellow-400 items-center justify-center hover:bg-yellow-400 hover:text-white hover:border-yellow-400 transition-colors group"
           aria-label="Next project"
         >
           <svg 
