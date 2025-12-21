@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar';
+import ProjectCarousel from './components/ProjectCarousel';
 
 export default function Home() {
   return (
@@ -534,68 +535,14 @@ export default function Home() {
       <section id="projects" className="py-16 lg:py-32 px-4 lg:px-8 section-divider">
         <div className="section-number">06</div>
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-            <div className="col-span-1 lg:col-span-4">
-              <h2 className="text-3xl lg:text-5xl font-bold mb-4 lg:mb-8 vertical-line">Proyek</h2>
-              <p className="text-gray-600 leading-relaxed mb-6 lg:mb-8 hidden lg:block">
-                Kumpulan proyek yang mendemonstrasikan kemampuan teknis dan analisis.
-              </p>
-            </div>
-            
-            <div className="col-span-1 lg:col-span-8 space-y-6 lg:space-y-8">
-              <div className="professional-card p-4 lg:p-8 hover-effect">
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-6">
-                  <div className="lg:col-span-1">
-                    <p className="small-caps text-gray-500 mb-2">Sep - Nov 2024</p>
-                    <div className="w-8 lg:w-12 h-px bg-black mb-3 lg:mb-4"></div>
-                  </div>
-                  <div className="lg:col-span-3">
-                    <h3 className="text-xl lg:text-2xl font-medium mb-2">Sistem Manajemen Obat</h3>
-                    <p className="font-medium text-gray-700 mb-3 lg:mb-4 text-sm lg:text-base">Klinik DESAMA • PHP Laravel</p>
-                    <p className="text-gray-600 leading-relaxed mb-4 lg:mb-6 text-sm lg:text-base">
-                      Sistem informasi untuk mengelola inventori obat dan rekam medis pasien 
-                      dengan fitur CRUD lengkap dan dashboard analitik.
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-4 lg:mb-6">
-                      <span className="px-3 py-1 bg-gray-100 text-xs lg:text-sm font-medium">Laravel</span>
-                      <span className="px-3 py-1 bg-gray-100 text-xs lg:text-sm font-medium">MySQL</span>
-                      <span className="px-3 py-1 bg-gray-100 text-xs lg:text-sm font-medium">Bootstrap</span>
-                    </div>
-                    <button className="px-4 py-2 lg:px-6 lg:py-2 bg-black text-white text-xs lg:text-sm hover:bg-gray-800 transition-colors w-full lg:w-auto">
-                      Lihat Detail
-                    </button>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="professional-card p-4 lg:p-8 hover-effect">
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-6">
-                  <div className="lg:col-span-1">
-                    <p className="small-caps text-gray-500 mb-2">Mar - Jun 2024</p>
-                    <div className="w-8 lg:w-12 h-px bg-black mb-3 lg:mb-4"></div>
-                  </div>
-                  <div className="lg:col-span-3">
-                    <h3 className="text-xl lg:text-2xl font-medium mb-2">BarBim+ Tes Psikologi</h3>
-                    <p className="font-medium text-gray-700 mb-3 lg:mb-4 text-sm lg:text-base">Platform Online • PHP & JavaScript</p>
-                    <p className="text-gray-600 leading-relaxed mb-4 lg:mb-6 text-sm lg:text-base">
-                      Platform tes psikologi digital dengan sistem penilaian otomatis 
-                      dan pelaporan hasil komprehensif.
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-4 lg:mb-6">
-                      <span className="px-3 py-1 bg-gray-100 text-xs lg:text-sm font-medium">PHP</span>
-                      <span className="px-3 py-1 bg-gray-100 text-xs lg:text-sm font-medium">JavaScript</span>
-                      <span className="px-3 py-1 bg-gray-100 text-xs lg:text-sm font-medium">HTML/CSS</span>
-                    </div>
-                    <button className="px-4 py-2 lg:px-6 lg:py-2 bg-black text-white text-xs lg:text-sm hover:bg-gray-800 transition-colors w-full lg:w-auto">
-                      Lihat Detail
-                    </button>
-                  </div>
-                </div>
-              </div>
-              
-             
-            </div>
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-3xl lg:text-5xl font-bold mb-4 lg:mb-6 vertical-line">Proyek</h2>
+            <p className="text-gray-600 leading-relaxed max-w-2xl mx-auto text-sm lg:text-base">
+              Kumpulan proyek yang mendemonstrasikan kemampuan teknis dan analisis.
+            </p>
           </div>
+          
+          <ProjectCarousel />
         </div>
       </section>
 
