@@ -61,7 +61,7 @@ export default function Home() {
                     <img 
                       src="/bima.png" 
                       alt="Alif Bima Mahendra" 
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      className="w-full h-full object-cover "
                     />
                   </div>
                 </div>
