@@ -1,9 +1,12 @@
+import Navbar from './components/Navbar';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
+      <Navbar />
+      
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 lg:px-8 py-12 lg:py-20">
+      <section id="hero" className="mt-10 min-h-screen flex items-center justify-center px-4 lg:px-8 py-12 lg:py-20">
         <div className="max-w-7xl w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Content */}
@@ -159,7 +162,7 @@ export default function Home() {
       </section>
 
       {/* Education Section */}
-      <section className="py-16 lg:py-32 px-4 lg:px-8 section-divider">
+      <section id="education" className="py-16 lg:py-32 px-4 lg:px-8 section-divider">
         <div className="section-number">02</div>
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
@@ -229,7 +232,7 @@ export default function Home() {
       </section>
 
       {/* Organizational Experience Section */}
-      <section className="py-32 px-8 section-divider">
+      <section id="organization" className="py-32 px-8 section-divider">
         <div className="section-number">03</div>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -357,7 +360,7 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section className="py-16 lg:py-32 px-4 lg:px-8 section-divider">
+      <section id="skills" className="py-16 lg:py-32 px-4 lg:px-8 section-divider">
         <div className="section-number">04</div>
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
@@ -528,7 +531,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section className="py-16 lg:py-32 px-4 lg:px-8 section-divider">
+      <section id="projects" className="py-16 lg:py-32 px-4 lg:px-8 section-divider">
         <div className="section-number">06</div>
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
