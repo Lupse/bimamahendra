@@ -26,10 +26,10 @@ export default function Home() {
               
               <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 pt-6 lg:pt-8">
                 <a href="#work" className="btn-primary">
-                  Lihat Karya Saya
+                  Tentang Saya
                 </a>
-                <a href="mailto:bimamahendra0705@gmail.com" className="btn-secondary">
-                  Hubungi Saya
+                <a href="#kontak" className="btn-secondary">
+                  Kontak
                 </a>
               </div>
               
@@ -597,7 +597,7 @@ export default function Home() {
       </section>
 
       {/* Footer/Contact Section */}
-      <footer className="bg-black text-white py-12 lg:py-20 px-4 lg:px-8">
+      <footer className="bg-black text-white py-12 lg:py-20 px-4 lg:px-8" id="kontak">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start lg:items-center">
             <div>
