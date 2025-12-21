@@ -154,7 +154,7 @@ export default function ProjectCarousel() {
                 </div>
 
                 {/* Project Info */}
-                <div className="order-2 lg:order-2 flex flex-col h-full">
+                <div className="order-2 lg:order-2 flex flex-col min-h-[400px] lg:min-h-[450px]">
                   <p className="small-caps text-gray-500 mb-4">{project.period}</p>
                   <div className="w-12 h-px bg-black mb-6"></div>
                   
