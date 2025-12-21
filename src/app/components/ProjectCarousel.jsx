@@ -17,7 +17,11 @@ export default function ProjectCarousel() {
       period: 'Sep - Nov 2024',
       description: 'Sistem informasi untuk mengelola inventori obat dan rekam medis pasien dengan fitur CRUD lengkap dan dashboard analitik. Meningkatkan efisiensi pengelolaan data medis hingga 40%.',
       image: '/projects/desama.jpg',
-      tags: ['Laravel', 'MySQL', 'Bootstrap'],
+      tags: [
+        { name: 'Laravel', icon: 'M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5' },
+        { name: 'MySQL', icon: 'M4 6h16M4 12h16M4 18h16' },
+        { name: 'Bootstrap', icon: 'M3 9h18v6H3z M7 9v6 M17 9v6' },
+      ],
     },
     {
       id: 2,
@@ -26,7 +30,11 @@ export default function ProjectCarousel() {
       period: 'Mar - Jun 2024',
       description: 'Platform tes psikologi digital dengan sistem penilaian otomatis dan pelaporan hasil komprehensif. Mempermudah proses testing untuk 200+ pengguna dengan interface yang user-friendly.',
       image: '/projects/barbim.jpg',
-      tags: ['PHP', 'JavaScript', 'HTML/CSS'],
+      tags: [
+        { name: 'PHP', icon: 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z' },
+        { name: 'JavaScript', icon: 'M3 3h18v18H3z M8 8h8v8H8z' },
+        { name: 'HTML/CSS', icon: 'M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z' },
+      ],
     },
     {
       id: 3,
@@ -35,7 +43,11 @@ export default function ProjectCarousel() {
       period: 'Feb - May 2024',
       description: 'Analisis pemetaan wilayah dan visualisasi data spasial menggunakan QGIS. Menghasilkan insight geografis untuk pengambilan keputusan berbasis lokasi.',
       image: '/projects/gis.jpg',
-      tags: ['QGIS', 'Python', 'Spatial Analysis'],
+      tags: [
+        { name: 'QGIS', icon: 'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z' },
+        { name: 'Python', icon: 'M9.75 3v4.5h4.5V3h-4.5zM9.75 16.5V21h4.5v-4.5h-4.5z' },
+        { name: 'Spatial', icon: 'M3 3h18v18H3z M12 8v8 M8 12h8' },
+      ],
     },
   ];
 
@@ -167,18 +179,31 @@ export default function ProjectCarousel() {
                     </p>
                   </div>
                   
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-3 mb-6">
                     {project.tags.map((tag, idx) => (
-                      <span 
+                      <div 
                         key={idx} 
-                        className="px-3 py-1 bg-gray-100 text-xs lg:text-sm font-medium"
+                        className="flex items-center gap-2 px-3 py-2 border-2 border-yellow-400 rounded-lg hover:bg-yellow-400 transition-colors group"
                       >
-                        {tag}
-                      </span>
+                        <svg 
+                          className="w-4 h-4 lg:w-5 lg:h-5 text-yellow-400 group-hover:text-black transition-colors" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d={tag.icon} />
+                        </svg>
+                        <span className="text-xs lg:text-sm font-medium text-gray-700 group-hover:text-black transition-colors">
+                          {tag.name}
+                        </span>
+                      </div>
                     ))}
                   </div>
                   
-                  <button className="px-6 py-3 bg-yellow-400 text-black font-semibold text-sm hover:bg-black hover:text-white transition-colors w-full lg:w-auto mt-auto">
+                  <button className="px-6 py-3 btn-secondary">
                     Lihat Detail
                   </button>
                 </div>

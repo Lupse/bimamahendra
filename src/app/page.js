@@ -515,12 +515,57 @@ export default function Home() {
                       Sertifikasi kompetensi dalam pengembangan aplikasi web mencakup 
                       front-end, back-end, dan database management.
                     </p>
-                    <div className="flex flex-wrap gap-2 mb-4 lg:mb-6">
-                      <span className="px-3 py-1 bg-gray-100 text-xs lg:text-sm font-medium">Web Development</span>
-                      <span className="px-3 py-1 bg-gray-100 text-xs lg:text-sm font-medium">PHP</span>
-                      <span className="px-3 py-1 bg-gray-100 text-xs lg:text-sm font-medium">Database</span>
+                    <div className="flex flex-wrap gap-3 mb-4 lg:mb-6">
+                      <div className="flex items-center gap-2 px-3 py-2 border-2 border-yellow-400 rounded-lg hover:bg-yellow-400 transition-colors group">
+                        <svg 
+                          className="w-4 h-4 lg:w-5 lg:h-5 text-yellow-400 group-hover:text-black transition-colors" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M3 3h18v18H3z M12 8v8 M8 12h8" />
+                        </svg>
+                        <span className="text-xs lg:text-sm font-medium text-gray-700 group-hover:text-black transition-colors">
+                          Web Development
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2 px-3 py-2 border-2 border-yellow-400 rounded-lg hover:bg-yellow-400 transition-colors group">
+                        <svg 
+                          className="w-4 h-4 lg:w-5 lg:h-5 text-yellow-400 group-hover:text-black transition-colors" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                        </svg>
+                        <span className="text-xs lg:text-sm font-medium text-gray-700 group-hover:text-black transition-colors">
+                          PHP
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2 px-3 py-2 border-2 border-yellow-400 rounded-lg hover:bg-yellow-400 transition-colors group">
+                        <svg 
+                          className="w-4 h-4 lg:w-5 lg:h-5 text-yellow-400 group-hover:text-black transition-colors" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <span className="text-xs lg:text-sm font-medium text-gray-700 group-hover:text-black transition-colors">
+                          Database
+                        </span>
+                      </div>
                     </div>
-                    <button className="px-4 py-2 lg:px-6 lg:py-2 bg-yellow-400 text-black font-semibold text-xs lg:text-sm hover:bg-black hover:text-white transition-colors w-full lg:w-auto">
+                    <button className="px-4 py-2 btn-secondary lg:px-6 lg:py-2 bg-yellow-400 text-black font-semibold text-xs lg:text-sm  w-full lg:w-auto">
                       Lihat Detail
                     </button>
                   </div>
