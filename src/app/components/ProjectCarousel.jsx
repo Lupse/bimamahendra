@@ -7,6 +7,9 @@ export default function ProjectCarousel() {
   const [showHint, setShowHint] = useState(false);
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImages, setModalImages] = useState([]);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const carouselRef = useRef(null);
 
   const projects = [
@@ -17,6 +20,7 @@ export default function ProjectCarousel() {
       period: 'Sep - Nov 2024',
       description: 'Sistem informasi untuk mengelola inventori obat dan rekam medis pasien dengan fitur CRUD lengkap dan dashboard analitik. Meningkatkan efisiensi pengelolaan data medis hingga 40%.',
       image: '/projects/desama.jpg',
+      images: ['/projects/desama.jpg', '/projects/desama-2.jpg', '/projects/desama-3.jpg'], // Multiple images
       tags: [
         { name: 'Laravel', icon: 'M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5' },
         { name: 'MySQL', icon: 'M4 6h16M4 12h16M4 18h16' },
@@ -30,6 +34,7 @@ export default function ProjectCarousel() {
       period: 'Mar - Jun 2024',
       description: 'Platform tes psikologi digital dengan sistem penilaian otomatis dan pelaporan hasil komprehensif. Mempermudah proses testing untuk 200+ pengguna dengan interface yang user-friendly.',
       image: '/projects/barbim.jpg',
+      images: ['/projects/barbim.jpg', '/projects/barbim-2.jpg', '/projects/barbim-3.jpg'],
       tags: [
         { name: 'PHP', icon: 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z' },
         { name: 'JavaScript', icon: 'M3 3h18v18H3z M8 8h8v8H8z' },
@@ -43,6 +48,7 @@ export default function ProjectCarousel() {
       period: 'Feb - May 2024',
       description: 'Analisis pemetaan wilayah dan visualisasi data spasial menggunakan QGIS. Menghasilkan insight geografis untuk pengambilan keputusan berbasis lokasi.',
       image: '/projects/gis.jpg',
+      images: ['/projects/gis.jpg', '/projects/gis-2.jpg', '/projects/gis-3.jpg'],
       tags: [
         { name: 'QGIS', icon: 'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z' },
         { name: 'Python', icon: 'M9.75 3v4.5h4.5V3h-4.5zM9.75 16.5V21h4.5v-4.5h-4.5z' },
@@ -62,6 +68,40 @@ export default function ProjectCarousel() {
   const goToSlide = (index) => {
     setCurrentSlide(index);
   };
+
+  const openModal = (project) => {
+    setModalImages(project.images || [project.image]);
+    setCurrentImageIndex(0);
+    setIsModalOpen(true);
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    document.body.style.overflow = 'unset';
+  };
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % modalImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + modalImages.length) % modalImages.length);
+  };
+
+  // Keyboard navigation for modal
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (!isModalOpen) return;
+      
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'ArrowLeft') prevImage();
+      if (e.key === 'ArrowRight') nextImage();
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isModalOpen, modalImages.length]);
 
   // Show hint when carousel comes into view
   useEffect(() => {
@@ -203,7 +243,10 @@ export default function ProjectCarousel() {
                     ))}
                   </div>
                   
-                  <button className="px-6 py-3 btn-secondary">
+                  <button 
+                    className="px-6 py-3 btn-secondary"
+                    onClick={() => openModal(project)}
+                  >
                     Lihat Detail
                   </button>
                 </div>
@@ -272,6 +315,135 @@ export default function ProjectCarousel() {
           <span>{projects.length}</span>
         </p>
       </div>
+
+      {/* Modal for Image Gallery */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center">
+          {/* Backdrop */}
+          <div 
+            className="absolute inset-0 bg-black bg-opacity-90"
+            onClick={closeModal}
+          ></div>
+
+          {/* Modal Content */}
+          <div className="relative z-10 w-full h-full flex items-center justify-center p-4 lg:p-8">
+            {/* Close Button */}
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 lg:top-8 lg:right-8 w-12 h-12 bg-white hover:bg-yellow-400 transition-colors flex items-center justify-center group z-20"
+              aria-label="Close modal"
+            >
+              <svg 
+                className="w-6 h-6 text-black" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* Image Container */}
+            <div className="relative max-w-6xl w-full h-full flex items-center justify-center">
+              {/* Main Image */}
+              <div className="relative w-full h-full flex items-center justify-center">
+                <div className="relative max-h-[80vh] max-w-full">
+                  <img
+                    src={modalImages[currentImageIndex]}
+                    alt={`Project image ${currentImageIndex + 1}`}
+                    className="max-w-full max-h-[80vh] object-contain"
+                    onError={(e) => {
+                      e.target.src = '';
+                      e.target.parentElement.innerHTML = `
+                        <div class="w-96 h-96 bg-gray-800 flex items-center justify-center">
+                          <div class="text-center">
+                            <div class="w-24 h-24 bg-gray-700 mx-auto mb-4 flex items-center justify-center">
+                              <span class="text-4xl text-gray-500">?</span>
+                            </div>
+                            <p class="text-gray-400">Image not found</p>
+                          </div>
+                        </div>
+                      `;
+                    }}
+                  />
+                </div>
+
+                {/* Previous Button */}
+                {modalImages.length > 1 && (
+                  <button
+                    onClick={prevImage}
+                    className="absolute left-2 lg:left-4 w-12 h-12 lg:w-14 lg:h-14 bg-white hover:bg-yellow-400 border-2 border-yellow-400 flex items-center justify-center transition-colors group"
+                    aria-label="Previous image"
+                  >
+                    <svg 
+                      className="w-6 h-6 text-black" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                )}
+
+                {/* Next Button */}
+                {modalImages.length > 1 && (
+                  <button
+                    onClick={nextImage}
+                    className="absolute right-2 lg:right-4 w-12 h-12 lg:w-14 lg:h-14 bg-white hover:bg-yellow-400 border-2 border-yellow-400 flex items-center justify-center transition-colors group"
+                    aria-label="Next image"
+                  >
+                    <svg 
+                      className="w-6 h-6 text-black" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                )}
+              </div>
+
+              {/* Image Counter */}
+              {modalImages.length > 1 && (
+                <div className="absolute bottom-4 lg:bottom-8 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-75 px-4 py-2 lg:px-6 lg:py-3">
+                  <p className="text-white text-sm lg:text-base">
+                    <span className="text-yellow-400 font-bold">{currentImageIndex + 1}</span>
+                    <span className="text-gray-400 mx-2">/</span>
+                    <span>{modalImages.length}</span>
+                  </p>
+                </div>
+              )}
+
+              {/* Thumbnails */}
+              {modalImages.length > 1 && (
+                <div className="absolute bottom-16 lg:bottom-20 left-1/2 transform -translate-x-1/2 flex gap-2 lg:gap-3">
+                  {modalImages.map((img, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setCurrentImageIndex(idx)}
+                      className={`w-2 h-2 lg:w-3 lg:h-3 transition-all ${
+                        currentImageIndex === idx 
+                          ? 'bg-yellow-400 scale-125' 
+                          : 'bg-gray-500 hover:bg-gray-400'
+                      }`}
+                      aria-label={`Go to image ${idx + 1}`}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Help Text */}
+            <div className="absolute bottom-4 left-4 hidden lg:block">
+              <p className="text-gray-400 text-sm">
+                Press <span className="text-yellow-400 font-medium">ESC</span> to close or use <span className="text-yellow-400 font-medium">← →</span> to navigate
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
