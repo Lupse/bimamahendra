@@ -30,7 +30,7 @@ export default function Home() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 pt-6 lg:pt-8">
-                <a href="#work" className="btn-primary">
+                <a href="/CV_BIMA.pdf" download className="btn-primary">
                   Download CV
                 </a>
                 <a href="#kontak" className="btn-secondary">
