@@ -31,7 +31,7 @@ export default function Home() {
               
               <div className="flex flex-col sm:flex-row gap-4 lg:gap-6 pt-6 lg:pt-8">
                 <a href="#work" className="btn-primary">
-                  Tentang Saya
+                  Download CV
                 </a>
                 <a href="#kontak" className="btn-secondary">
                   Kontak
@@ -39,12 +39,12 @@ export default function Home() {
               </div>
               
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 lg:gap-8 pt-8 lg:pt-12 border-t border-gray-100">
-                <div className="stagger-animation text-center">
+              <div className="grid grid-cols-2  pt-8 lg:pt-12 border-t border-gray-100">
+                <div className=" text-center  border-r-3 border-yellow-400  lg:p-5 ">
                   <div className="text-2xl lg:text-4xl font-bold ">6+</div>
-                  <p className="small-caps text-gray-500 text-xs lg:text-sm">Proyek</p>
+                  <p className="small-caps text-gray-500 text-xs lg:text-sm ">Proyek</p>
                 </div>
-                <div className="stagger-animation text-center">
+                <div className=" text-center  lg:p-5">
                   <div className="text-2xl lg:text-4xl font-bold ">4+</div>
                   <p className="small-caps text-gray-500 text-xs lg:text-sm">Peran</p>
                 </div>
@@ -182,9 +182,9 @@ export default function Home() {
       </section>
 
       {/* Footer/Contact Section */}
-      <footer className="bg-black text-white py-12 lg:py-20 px-4 lg:px-8" id="kontak">
+      <footer className="bg-black text-white py-12 lg:py-10 px-4 lg:px-8" id="kontak">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start lg:items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start lg:items-start">
             <div>
               <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6 lg:mb-8 leading-tight">
                 Mari Berkolaborasi<br/>
@@ -211,8 +211,8 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="lg:text-right">
-              <div className="flex flex-row lg:flex-col gap-8 lg:gap-6">
+            <div className="lg:text-left lg:mt-5 lg:ps-40 ">
+              <div className="flex flex-row  gap-8 lg:gap-6">
                 <div className="flex-1">
                   <p className="small-caps text-gray-400 mb-3 lg:mb-2 text-xs lg:text-sm">Terhubung</p>
                   <div className="space-y-2">

@@ -56,7 +56,7 @@ export default function Skills() {
               >
                 <div className="aspect-square bg-white border border-gray-200 rounded-md overflow-hidden transition-all duration-300 hover:border-yellow-400 hover:shadow-md hover:-translate-y-1 flex items-center justify-center p-2 lg:p-3">
                   {/* Image Container */}
-                  <div className="relative w-[80px] h-[80px] flex items-center justify-center">
+                  <div className="relative w-[50px] h-[50px]  lg:w-[80px] lg:h-[80px] flex items-center justify-center">
                     <img
                       src={skill.image}
                       alt={skill.name}

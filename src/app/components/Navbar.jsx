@@ -61,18 +61,7 @@ export default function Navbar() {
             >
               Pengalaman
             </button>
-            <button
-              onClick={() => scrollToSection('education')}
-              className="small-caps text-xs lg:text-sm text-gray-600 hover:text-black transition-colors"
-            >
-              Pendidikan
-            </button>
-            <button
-              onClick={() => scrollToSection('organization')}
-              className="small-caps text-xs lg:text-sm text-gray-600 hover:text-black transition-colors"
-            >
-              Organisasi
-            </button>
+            
             <button
               onClick={() => scrollToSection('skills')}
               className="small-caps text-xs lg:text-sm text-gray-600 hover:text-black transition-colors"
@@ -130,18 +119,7 @@ export default function Navbar() {
             >
               Pengalaman
             </button>
-            <button
-              onClick={() => scrollToSection('education')}
-              className="block w-full text-left small-caps text-sm text-gray-600 hover:text-black transition-colors py-2"
-            >
-              Pendidikan
-            </button>
-            <button
-              onClick={() => scrollToSection('organization')}
-              className="block w-full text-left small-caps text-sm text-gray-600 hover:text-black transition-colors py-2"
-            >
-              Organisasi
-            </button>
+            
             <button
               onClick={() => scrollToSection('skills')}
               className="block w-full text-left small-caps text-sm text-gray-600 hover:text-black transition-colors py-2"
