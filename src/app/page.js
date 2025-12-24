@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
 import ProjectCarousel from './components/ProjectCarousel';
 import Skills from './components/Skills';
+import WhyUs from './components/WhyUs';
 
 export default function Home() {
   return (
@@ -39,14 +40,18 @@ export default function Home() {
               </div>
               
               {/* Stats */}
-              <div className="grid grid-cols-2  pt-8 lg:pt-12 border-t border-gray-100">
-                <div className=" text-center  border-r-3 border-yellow-400  lg:p-5 ">
-                  <div className="text-2xl lg:text-4xl font-bold ">6+</div>
-                  <p className="small-caps text-gray-500 text-xs lg:text-sm ">Proyek</p>
+              <div className="grid grid-cols-3  pt-8 lg:pt-12 border-t border-gray-100">
+                <div className=" text-center lg:p-5 bg-yellow-400 rounded-l-lg">
+                  <div className="text-2xl lg:text-4xl font-bold ">3+</div>
+                  <p className="small-caps  text-xs lg:text-sm ">Years Experience</p>
                 </div>
-                <div className=" text-center  lg:p-5">
+                <div className=" text-center lg:p-5 bg-black">
+                  <div className="text-2xl lg:text-4xl font-bold text-white">6+</div>
+                  <p className="small-caps text-white text-xs lg:text-sm ">Proyek</p>
+                </div>
+                <div className=" text-center  lg:p-5 bg-yellow-400 rounded-r-lg">
                   <div className="text-2xl lg:text-4xl font-bold ">4+</div>
-                  <p className="small-caps text-gray-500 text-xs lg:text-sm">Peran</p>
+                  <p className="small-caps  text-xs lg:text-sm">Peran</p>
                 </div>
               </div>
             </div>
@@ -54,7 +59,7 @@ export default function Home() {
             {/* Right Image */}
             <div className="col-span-1 lg:col-span-5 flex justify-center order-first lg:order-last slide-in-right">
               <div className="relative">
-                <div className="w-60 h-72 lg:w-80 lg:h-96 xl:w-120 xl:h-[600px] relative overflow-hidden">
+                <div className="w-60 h-72 lg:w-80 lg:h-96 xl:w-120 xl:h-150 relative overflow-hidden">
                   {/* Decorative elements */}
                   <div className="absolute -top-2 -left-2 lg:-top-4 lg:-left-4 w-full h-full border-2 border-yellow-400 z-0"></div>
                   <div className="absolute top-2 left-2 lg:top-4 lg:left-4 w-full h-full bg-gray-50 z-10"></div>
@@ -180,6 +185,9 @@ export default function Home() {
           <ProjectCarousel />
         </div>
       </section>
+
+      {/* Why Us Section */}
+      <WhyUs />
 
       {/* Footer/Contact Section */}
       <footer className="bg-black text-white py-12 lg:py-10 px-4 lg:px-8" id="kontak">
