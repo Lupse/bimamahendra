@@ -75,6 +75,12 @@ export default function Navbar() {
               Proyek
             </button>
             <button
+              onClick={() => scrollToSection('why-us')}
+              className="block w-full text-left small-caps text-sm text-gray-600 hover:text-black transition-colors py-2"
+            >
+              Why Us
+            </button>
+            <button
               onClick={() => scrollToSection('kontak')}
               className="px-4 lg:px-6 py-2 bg-yellow-400 text-white text-xs lg:text-sm hover:bg-yellow-500 transition-colors"
             >

@@ -17,23 +17,19 @@ export default function Skills() {
     {
       title: "Frontend Development",
       skills: [
-        { name: "Word", image: "/skills/word.png" },
-        { name: "Excel", image: "/skills/excel.png" },
-        { name: "PowerPoint", image: "/skills/powerpoint.png" },
-        { name: "Canva", image: "/skills/canva.png" },
         { name: "Figma", image: "/skills/figma.png" },
-        { name: "C++", image: "/skills/c.png" },
+        { name: "NodeJS", image: "/skills/nodejs.png" },
+        { name: "Laravel", image: "/skills/laravel.png" },
+        { name: "Python", image: "/skills/python.png" },
+        { name: "Dart", image: "/skills/dart.png" },
+        { name: "Kotlin", image: "/skills/kotlin.png" },
       ]
     },
     {
       title: "Backend & Tools",
       skills: [
-        { name: "PHP", image: "/skills/php.png" },
-        { name: "JavaScript", image: "/skills/js.png" },
-        { name: "Python", image: "/skills/python.png" },
-        { name: "Java", image: "/skills/java.png" },
-        { name: "R", image: "/skills/r.png" },
-        { name: "SPSS", image: "/skills/spss.png" },
+        { name: "Power BI", image: "/skills/powerbi.png" },
+        { name: "Git", image: "/skills/git.png" },
       ]
     }
   ];

@@ -41,15 +41,15 @@ export default function Home() {
               
               {/* Stats */}
               <div className="grid grid-cols-3  pt-8 lg:pt-12 border-t border-gray-100">
-                <div className=" text-center lg:p-5 bg-yellow-400 rounded-l-lg">
+                <div className=" text-center p-5 bg-yellow-400 rounded-l-lg">
                   <div className="text-2xl lg:text-4xl font-bold ">3+</div>
                   <p className="small-caps  text-xs lg:text-sm ">Years Experience</p>
                 </div>
-                <div className=" text-center lg:p-5 bg-black">
+                <div className=" text-center p-5 bg-black">
                   <div className="text-2xl lg:text-4xl font-bold text-white">6+</div>
                   <p className="small-caps text-white text-xs lg:text-sm ">Proyek</p>
                 </div>
-                <div className=" text-center  lg:p-5 bg-yellow-400 rounded-r-lg">
+                <div className=" text-center p-5 bg-yellow-400 rounded-r-lg">
                   <div className="text-2xl lg:text-4xl font-bold ">4+</div>
                   <p className="small-caps  text-xs lg:text-sm">Peran</p>
                 </div>
@@ -190,7 +190,7 @@ export default function Home() {
       <WhyUs />
 
       {/* Footer/Contact Section */}
-      <footer className="bg-black text-white py-12 lg:py-16 px-4 lg:px-8" id="kontak">
+      <footer className="bg-black text-white py-12 lg:py-8 px-4 lg:px-8" id="kontak">
         <div className="w-full mx-auto lg:px-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-8 lg:mb-12">
             {/* Logo & Brand */}
@@ -207,7 +207,7 @@ export default function Home() {
             </div>
 
             {/* Our Address */}
-            <div className="text-center">
+            <div className="text-left lg:text-center">
               <h3 className="text-yellow-400 text-lg font-semibold mb-4">Our Address</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
                 Jl. Kaliurang KM 14.5<br />
@@ -218,9 +218,9 @@ export default function Home() {
             </div>
 
             {/* Quick Links */}
-            <div className="text-center">
+            <div className="text-left lg:text-center">
               <h3 className="text-yellow-400 text-lg font-semibold mb-4">Quick Links</h3>
-              <nav className="flex flex-col items-center space-y-2">
+              <nav className="flex flex-col items-start lg:items-center space-y-2">
                 <a href="#hero" className="text-gray-300 hover:text-yellow-400 transition-colors text-sm">
                   Home
                 </a>
@@ -240,9 +240,9 @@ export default function Home() {
             </div>
 
             {/* Connect With Me */}
-            <div className="text-center">
+            <div className="text-left lg:text-center">
               <h3 className="text-yellow-400 text-lg font-semibold mb-4">Connect With Me</h3>
-              <div className="flex gap-4 justify-center">
+              <div className="flex gap-4 justify-start lg:justify-center">
                 <a 
                   href="https://linkedin.com/in/alif-bima-mahendra" 
                   target="_blank"

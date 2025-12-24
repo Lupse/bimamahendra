@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 export default function WhyUs() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [hoveredCard, setHoveredCard] = useState(null);
 
   const features = [
     {
@@ -103,7 +104,7 @@ export default function WhyUs() {
   return (
     <section id="why-us" className="py-8 lg:py-16 px-4 lg:px-8 bg-white section-divider relative">
       <div className="section-number z-50">04</div>
-      <div className="max-w-7xl mx-auto overflow-hidden mt-10">
+      <div className="max-w-7xl mx-auto mt-10">
         {/* Header */}
         <div className="mb-8 mt-10 lg:mb-16 text-center">
           <div className="inline-block mb-4">
@@ -119,86 +120,137 @@ export default function WhyUs() {
           </p>
         </div>
 
-        {/* Carousel Container */}
-        <div className="relative h-[400px] lg:h-[500px] flex items-center justify-center">
-          {/* Cards */}
-          <div className="relative w-full max-w-2xl h-full flex items-center justify-center">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md lg:max-w-lg transition-all duration-700 ease-in-out"
-                style={getCardStyle(index)}
-              >
-                <div className="bg-black rounded-lg p-6 lg:p-10 h-full pointer-events-auto">
-                  {/* Icon */}
-                  <div className="mb-6 lg:mb-8 flex justify-center">
-                    <div className="w-16 h-16 lg:w-20 lg:h-20 flex items-center justify-center">
-                      <svg
-                        className="w-full h-full text-yellow-400"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                        strokeWidth={2}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d={feature.icon} />
-                      </svg>
+        {/* Mobile Carousel - visible only on mobile */}
+        <div className="lg:hidden">
+          <div className="relative h-[400px] flex items-center justify-center overflow-hidden">
+            {/* Cards */}
+            <div className="relative w-full max-w-md h-full flex items-center justify-center">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full transition-all duration-700 ease-in-out"
+                  style={getCardStyle(index)}
+                >
+                  <div className="bg-black rounded-lg p-6 h-full">
+                    {/* Icon */}
+                    <div className="mb-6 flex justify-center">
+                      <div className="w-16 h-16 flex items-center justify-center">
+                        <svg
+                          className="w-full h-full text-yellow-400"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d={feature.icon} />
+                        </svg>
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Content */}
-                  <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 lg:mb-6 text-center">
-                    {feature.title}
-                  </h3>
-                  <p className="text-base lg:text-lg text-gray-300 leading-relaxed text-center">
-                    {feature.description}
-                  </p>
+                    {/* Content */}
+                    <h3 className="text-2xl font-bold text-white mb-4 text-center">
+                      {feature.title}
+                    </h3>
+                    <p className="text-base text-gray-300 leading-relaxed text-center">
+                      {feature.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* Navigation Buttons */}
+            <button
+              onClick={goToPrev}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-40 w-10 h-10 bg-yellow-400 hover:bg-yellow-500 rounded-full flex items-center justify-center transition-colors shadow-lg"
+              aria-label="Previous"
+            >
+              <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            <button
+              onClick={goToNext}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-40 w-10 h-10 bg-yellow-400 hover:bg-yellow-500 rounded-full flex items-center justify-center transition-colors shadow-lg"
+              aria-label="Next"
+            >
+              <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
           </div>
 
-          {/* Navigation Buttons */}
-          <button
-            onClick={goToPrev}
-            className="absolute left-0 lg:left-4 top-1/2 -translate-y-1/2 z-40 w-10 h-10 lg:w-12 lg:h-12 bg-yellow-400 hover:bg-yellow-500 rounded-full flex items-center justify-center transition-colors shadow-lg"
-            aria-label="Previous"
-          >
-            <svg className="w-5 h-5 lg:w-6 lg:h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-
-          <button
-            onClick={goToNext}
-            className="absolute right-0 lg:right-4 top-1/2 -translate-y-1/2 z-40 w-10 h-10 lg:w-12 lg:h-12 bg-yellow-400 hover:bg-yellow-500 rounded-full flex items-center justify-center transition-colors shadow-lg"
-            aria-label="Next"
-          >
-            <svg className="w-5 h-5 lg:w-6 lg:h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+          {/* Indicators */}
+          <div className="flex justify-center gap-2 mt-8">
+            {features.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  setIsAutoPlaying(false);
+                  setActiveIndex(index);
+                  setTimeout(() => setIsAutoPlaying(true), 5000);
+                }}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === activeIndex 
+                    ? 'bg-yellow-400 w-8' 
+                    : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
-        {/* Indicators */}
-        <div className="flex justify-center gap-2 mt-8 lg:mt-12">
-          {features.map((_, index) => (
-            <button
+        {/* Desktop Grid - visible only on desktop */}
+        <div className="hidden lg:grid lg:grid-cols-3 gap-6">
+          {features.map((feature, index) => (
+            <div
               key={index}
-              onClick={() => {
-                setIsAutoPlaying(false);
-                setActiveIndex(index);
-                setTimeout(() => setIsAutoPlaying(true), 5000);
-              }}
-              className={`w-2 h-2 lg:w-3 lg:h-3 rounded-full transition-all duration-300 ${
-                index === activeIndex 
-                  ? 'bg-yellow-400 w-8 lg:w-12' 
-                  : 'bg-gray-300 hover:bg-gray-400'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
+              className="bg-black rounded-lg p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+              onMouseEnter={() => setHoveredCard(index)}
+              onMouseLeave={() => setHoveredCard(null)}
+            >
+              {/* Icon */}
+              <div className="mb-6 flex justify-center">
+                <div className="w-16 h-16 flex items-center justify-center">
+                  <svg
+                    className="w-full h-full text-yellow-400 transition-transform duration-300"
+                    style={{
+                      transform: hoveredCard === index ? 'scale(1.1)' : 'scale(1)'
+                    }}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    strokeWidth={2}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d={feature.icon} />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Content */}
+              <h3 className="text-2xl font-bold text-white mb-4 text-center">
+                {feature.title}
+              </h3>
+              <p className="text-base text-gray-300 leading-relaxed text-center">
+                {feature.description}
+              </p>
+
+              {/* Hover border effect */}
+              <div 
+                className="absolute inset-0 border-2 border-yellow-400 rounded-lg transition-opacity duration-300 pointer-events-none"
+                style={{
+                  opacity: hoveredCard === index ? 1 : 0
+                }}
+              />
+            </div>
           ))}
         </div>
       </div>
