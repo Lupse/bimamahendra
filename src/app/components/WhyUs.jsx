@@ -104,7 +104,7 @@ export default function WhyUs() {
   return (
     <section id="why-us" className="py-8 lg:py-16 px-4 lg:px-8 bg-white section-divider relative">
       <div className="section-number z-50">04</div>
-      <div className="max-w-7xl mx-auto mt-10">
+      <div className="max-w-7xl mx-auto mt-20">
         {/* Header */}
         <div className="mb-8 mt-10 lg:mb-16 text-center">
           <div className="inline-block mb-4">

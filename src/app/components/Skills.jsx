@@ -155,7 +155,7 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-8 lg:py-16 px-4 lg:px-8 bg-gray-50 section-divider">
+    <section id="skills" className="py-8 lg:py-16 px-4 lg:px-8 bg-white section-divider">
       <div className="section-number">02</div>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
