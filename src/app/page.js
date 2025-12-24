@@ -191,7 +191,7 @@ export default function Home() {
 
       {/* Footer/Contact Section */}
       <footer className="bg-black text-white py-12 lg:py-16 px-4 lg:px-8" id="kontak">
-        <div className="w-full mx-auto">
+        <div className="w-full mx-auto lg:px-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-8 lg:mb-12">
             {/* Logo & Brand */}
             <div className="lg:col-span-1">
@@ -207,7 +207,7 @@ export default function Home() {
             </div>
 
             {/* Our Address */}
-            <div>
+            <div className="text-center">
               <h3 className="text-yellow-400 text-lg font-semibold mb-4">Our Address</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
                 Jl. Kaliurang KM 14.5<br />
@@ -218,9 +218,9 @@ export default function Home() {
             </div>
 
             {/* Quick Links */}
-            <div>
+            <div className="text-center">
               <h3 className="text-yellow-400 text-lg font-semibold mb-4">Quick Links</h3>
-              <nav className="flex flex-col space-y-2">
+              <nav className="flex flex-col items-center space-y-2">
                 <a href="#hero" className="text-gray-300 hover:text-yellow-400 transition-colors text-sm">
                   Home
                 </a>
@@ -230,6 +230,9 @@ export default function Home() {
                 <a href="#projects" className="text-gray-300 hover:text-yellow-400 transition-colors text-sm">
                   Projects
                 </a>
+                <a href="#why-us" className="text-gray-300 hover:text-yellow-400 transition-colors text-sm">
+                  Why Us
+                </a>
                 <a href="#kontak" className="text-gray-300 hover:text-yellow-400 transition-colors text-sm">
                   Contact
                 </a>
@@ -237,9 +240,9 @@ export default function Home() {
             </div>
 
             {/* Connect With Me */}
-            <div>
+            <div className="text-center">
               <h3 className="text-yellow-400 text-lg font-semibold mb-4">Connect With Me</h3>
-              <div className="flex gap-4">
+              <div className="flex gap-4 justify-center">
                 <a 
                   href="https://linkedin.com/in/alif-bima-mahendra" 
                   target="_blank"
